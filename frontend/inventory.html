@@ -1,0 +1,54 @@
+<!-- inventory.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Merco Distributor - Inventory</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Merco Distributor</h1>
+    <nav>
+      <ul>
+        <li><a href="login.html">Logout</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="suppliers.html">Suppliers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Current Inventory</h2>
+    <div id="inventoryList"></div>
+    <button id="downloadInvoice">Download Inventory Report</button>
+
+    <hr />
+
+    <h2>Daily Summary (Beginning & Ending)</h2>
+    <!-- Button to create a daily summary row for each item -->
+    <button id="createDailySummaryBtn">Create Daily Summary</button>
+    <br /><br />
+
+    <!-- Date/time pickers -->
+    <label for="startDate">Start:</label>
+    <input type="datetime-local" id="startDate" />
+    <label for="endDate">End:</label>
+    <input type="datetime-local" id="endDate" />
+    <!-- This button now toggles the summary display -->
+    <button id="loadSummaryBtn">Toggle Daily Summary</button>
+
+    <!-- This container is initially hidden -->
+    <div id="dailySummaryList" style="display: none;"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Merco Distributor. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/inventory.js"></script>
+</body>
+</html>
